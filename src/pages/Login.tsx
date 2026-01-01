@@ -1,7 +1,8 @@
-// src/pages/Login.tsx
 import React, { useState } from 'react';
 import type { FormEvent } from 'react';
 import styled from 'styled-components';
+import { login } from '../service/login';
+import { useNavigate } from 'react-router-dom';
 
 const Page = styled.div`
   /* 始终占满视口并居中 */
@@ -62,13 +63,21 @@ const Button = styled.button`
 `;
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e: FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
     console.log('登录', { username, password });
-    // TODO: 真正登录逻辑
+    const res = await login({ username, password });
+    if (!res.ok) {
+      console.log(res.error);
+      return;
+    }
+    // TODO 在 REDUX中存储token
+    alert(111)
+    navigate('/dashboard', { replace: true });
   };
 
   return (
