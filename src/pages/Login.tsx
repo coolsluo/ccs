@@ -76,7 +76,6 @@ const Login: React.FC = () => {
       return;
     }
     // TODO 在 REDUX中存储token
-    alert(111)
     navigate('/dashboard', { replace: true });
   };
 

@@ -107,11 +107,28 @@
       ],
       "tutor": "Sarah Tan",
       "status": "Confirmed"
+    },
+    {
+      "id": "L011",
+      "date": "2026-01-16T09:00:00Z",
+      "type": "Upcoming",
+      "subject": "Python Automation for Kids",
+      "students": [
+        "Elijah"
+      ],
+      "tutor": "test",
+      "status": "Confirmed"
     }
   ],
   "users": [
     {
       "id": "U001",
+      "name": "test",
+      "password": "123456",
+      "role": "Tutor"
+    },
+    {
+      "id": "U002",
       "name": "Sarah Tan",
       "password": "123456",
       "role": "Tutor"
