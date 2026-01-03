@@ -72,12 +72,12 @@
     },
     {
       "id": "L007",
-      "date": "2025-11-12T11:00:00Z",
-      "type": "Available",
+      "date": "2026-01-03T11:00:00Z",
+      "type": "Upcoming",
       "subject": "Python for Kids - Game Projects",
       "students": [],
-      "tutor": null,
-      "status": "Available"
+      "tutor": "test",
+      "status": "Confirmed"
     },
     {
       "id": "L008",
@@ -85,7 +85,7 @@
       "type": "Available",
       "subject": "Roblox Game Design - Level 1",
       "students": [],
-      "tutor": null,
+      "tutor": "test",
       "status": "Available"
     },
     {
@@ -94,7 +94,7 @@
       "type": "Available",
       "subject": "Minecraft AI Coding Adventure",
       "students": [],
-      "tutor": null,
+      "tutor": "test",
       "status": "Available"
     },
     {
@@ -116,6 +116,60 @@
       "students": [
         "Elijah"
       ],
+      "tutor": "test",
+      "status": "Confirmed"
+    },
+    {
+      "id": "L012",
+      "date": "2025-10-05T16:00:00Z",
+      "type": "Historic",
+      "subject": "Python for Kids - Introduction",
+      "students": [
+        "Chloe",
+        "Aaron"
+      ],
+      "tutor": "test",
+      "status": "Completed"
+    },
+    {
+      "id": "L013",
+      "date": "2025-11-05T16:00:00Z",
+      "type": "Historic",
+      "subject": "Python for Kids - Introduction",
+      "students": [
+        "Chloe",
+        "Aaron"
+      ],
+      "tutor": "test",
+      "status": "Completed"
+    },
+    {
+      "id": "L014",
+      "date": "2025-12-05T16:00:00Z",
+      "type": "Historic",
+      "subject": "Python for Kids - Introduction",
+      "students": [
+        "Chloe",
+        "Aaron"
+      ],
+      "tutor": "test",
+      "status": "Completed"
+    },
+    {
+      "id": "L015",
+      "date": "2026-01-04T11:00:00Z",
+      "type": "Upcoming",
+      "subject": "Python for Kids - Game Projects",
+      "students": [],
+      "tutor": "test",
+      "status": "Confirmed"
+    },
+    {
+      "id": "L016",
+      "date": "2026-01-05T11:00:00Z",
+      "type": "Upcoming",
+      "subject": "Python for Kids - Game Projects",
+      "students": [],
       "tutor": "test",
       "status": "Confirmed"
     }

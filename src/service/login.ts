@@ -6,7 +6,7 @@ interface LoginParams {
 }
 
 type LoginResult =
-    | { ok: true }
+    | { ok: true, user: { id: string; name: string, role: string } }
     | { ok: false; error: string };
 
 export async function login(data: LoginParams): Promise<LoginResult> {
@@ -20,7 +20,7 @@ export async function login(data: LoginParams): Promise<LoginResult> {
         if (!user) {
             return { ok: false, error: '用户名或密码错误！' };
         }
-        return { ok: true };
+        return { ok: true, user: { id: user.id, name: user.name, role: user.role } };
     } catch (e: any) {
         return { ok: false, error: e.message };
     }
