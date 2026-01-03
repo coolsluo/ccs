@@ -1,5 +1,8 @@
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import type { RootState } from '../store';
+import { logout as logoutAction } from '../store/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
 
 interface Props {
   dark: boolean;
@@ -8,19 +11,21 @@ interface Props {
 
 export default function TopBar({ dark, setDark }: Props) {
   const nav = useNavigate();
+  const currentUser = useSelector((state: RootState) => state.user.user);
+  const dispatch = useDispatch();
 
   const logout = () => {
-    localStorage.removeItem('token');
+    dispatch(logoutAction());
     nav('/login', { replace: true });
   };
 
   return (
     <Header>
-      <Left>CCS</Left>
+      <Left>Test Example</Left>
       <Right>
-        <span>当前用户：张三</span>
+        <span>user: {currentUser?.name}</span>
         <Toggle onClick={() => setDark(!dark)}>{dark ? 'Light' : 'Dark'}</Toggle>
-        <Exit onClick={logout}>退出</Exit>
+        <Exit onClick={logout}>logout</Exit>
       </Right>
     </Header>
   );

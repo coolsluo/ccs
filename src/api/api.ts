@@ -27,10 +27,10 @@ export const getLessons = async (type?: string,
     return res.data;
 }
 
-export const updateLesson = async (lesson: Lesson): Promise<Lesson> => {
-    const res: AxiosResponse<Lesson> = await api.patch(
-        `/lessons/${lesson.id}`,
-        lesson
-    );
+export const updateLesson = async (
+    id: string,
+    patch: Partial<Lesson>
+): Promise<Lesson> => {
+    const res = await api.patch<Lesson>(`/lessons/${id}`, patch);
     return res.data;
-}
+};

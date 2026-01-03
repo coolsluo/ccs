@@ -3,6 +3,8 @@ import type { FormEvent } from 'react';
 import styled from 'styled-components';
 import { login } from '../service/login';
 import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../store/userSlice';
 
 const Page = styled.div`
   /* 始终占满视口并居中 */
@@ -66,6 +68,7 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const dispatch = useDispatch()
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -75,7 +78,7 @@ const Login: React.FC = () => {
       console.log(res.error);
       return;
     }
-    // TODO 在 REDUX中存储token
+    dispatch(setUser(res.user));
     navigate('/dashboard', { replace: true });
   };
 
