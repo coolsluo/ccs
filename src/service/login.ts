@@ -12,13 +12,13 @@ type LoginResult =
 export async function login(data: LoginParams): Promise<LoginResult> {
     const { username, password } = data;
     if (!username?.trim() || !password?.trim()) {
-        return { ok: false, error: '用户名/密码不能为空！' };
+        return { ok: false, error: 'user or password is required!' };
     }
     try {
         const users = await getUsers();
         const user = users.find((u) => u.name === username && u.password === password);
         if (!user) {
-            return { ok: false, error: '用户名或密码错误！' };
+            return { ok: false, error: 'user or password error!' };
         }
         return { ok: true, user: { id: user.id, name: user.name, role: user.role } };
     } catch (e: any) {
