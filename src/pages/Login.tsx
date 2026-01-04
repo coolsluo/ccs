@@ -68,14 +68,15 @@ const Login: React.FC = () => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
   const dispatch = useDispatch()
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    console.log('登录', { username, password });
+    setError('');     
     const res = await login({ username, password });
     if (!res.ok) {
-      console.log(res.error);
+      setError(res.error); 
       return;
     }
     dispatch(setUser(res.user));
@@ -85,20 +86,23 @@ const Login: React.FC = () => {
   return (
     <Page>
       <Card onSubmit={handleSubmit}>
-        <Title>ccs</Title>
+        <Title>Test Example</Title>
         <Input
-          placeholder="账号"
+          placeholder="user"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
         />
         <Input
           type="password"
-          placeholder="密码"
+          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
         />
+        {error && (
+          <div style={{ color: '#ff4d4f', marginBottom: 8 }}>{error}</div>
+        )}
         <Button type="submit">登录</Button>
       </Card>
     </Page>
