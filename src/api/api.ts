@@ -5,7 +5,9 @@ import type { User, Lesson } from './model';
 
 
 const api = axios.create({
-    baseURL: 'http://localhost:3001',
+    // baseURL: 'http://localhost:3001',
+    baseURL: 'http://47.108.50.241',
+    // baseURL: '/api', 
     headers: { 'Content-Type': 'application/json' },
 });
 
