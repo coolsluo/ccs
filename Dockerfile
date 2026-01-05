@@ -13,4 +13,4 @@ COPY mock ./mock
 EXPOSE 3001
 
 # 4. 启动
-CMD ["json-server","--watch","mock/db.json","--host","0.0.0.0","--port","3001"]
+CMD ["json-server","--watch","mock/db.json","--host","0.0.0.0","--port","3001" ,"--no-cors"]
