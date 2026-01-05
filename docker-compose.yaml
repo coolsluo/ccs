@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - json-server
+    networks:
+      - app-net
+
+  json-server:
+    image: my-json-server
+    ports:
+      - "3001:3001"
+    networks:
+      - app-net
+
+networks:
+  app-net:
+    external: true
