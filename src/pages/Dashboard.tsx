@@ -39,8 +39,10 @@ const Dashboard: React.FC = () => {
 
             const { data: availableLessons } = await queryLessons(LessonType.Available, currentUser?.name);
             const { data: upcomingLessons } = await queryLessons(LessonType.Upcoming, currentUser?.name);
+            const { data: todayLessons } = await queryLessons(LessonType.Upcoming, currentUser?.name, [today, today]);
             dispatch(setLessons({ key: "available", lessons: availableLessons }));
             dispatch(setLessons({ key: "upcoming", lessons: upcomingLessons }));
+            dispatch(setLessons({ key: "today", lessons: todayLessons }));  
 
             console.log('take class success', res);
         } catch (e: any) {
