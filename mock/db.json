@@ -26,7 +26,7 @@
     },
     {
       "id": "L004",
-      "date": "2026-01-08T10:00:00Z",
+      "date": "2026-01-18T10:00:00Z",
       "type": "Upcoming",
       "subject": "Minecraft Redstone Logic",
       "students": [
@@ -35,6 +35,30 @@
       ],
       "tutor": "Sarah Tan",
       "status": "Confirmed"
+    },
+    {
+      "id": "L0071",
+      "date": "2026-01-01T11:00:00Z",
+      "type": "Historic",
+      "subject": "Python for Kids - Game Projects",
+      "students": [
+        "Chloe",
+        "Aaron"
+      ],
+      "tutor": "test",
+      "status": "Completed"
+    },
+    {
+      "id": "L0072",
+      "date": "2025-12-22T11:00:00Z",
+      "type": "Historic",
+      "subject": "Python for Kids - Game Projects",
+      "students": [
+        "Chloe",
+        "Aaron"
+      ],
+      "tutor": "test",
+      "status": "Completed"
     },
     {
       "id": "L007",
@@ -50,7 +74,7 @@
     },
     {
       "id": "L008",
-      "date": "2026-01-13T17:00:00Z",
+      "date": "2026-01-05T17:00:00Z",
       "type": "Available",
       "subject": "Roblox Game Design - Level 1",
       "students": [],
@@ -58,8 +82,35 @@
       "status": "Available"
     },
     {
+      "id": "L0041",
+      "date": "2026-01-18T10:00:00Z",
+      "type": "Available",
+      "subject": "Minecraft Redstone Logic",
+      "students": [],
+      "tutor": "Sarah Tan",
+      "status": "Available"
+    },
+    {
+      "id": "L0042",
+      "date": "2026-01-06T10:00:00Z",
+      "type": "Available",
+      "subject": "Minecraft Redstone Logic",
+      "students": [],
+      "tutor": "Sarah Tan",
+      "status": "Available"
+    },
+    {
+      "id": "L0042",
+      "date": "2026-01-26T10:00:00Z",
+      "type": "Available",
+      "subject": "Minecraft Redstone Logic",
+      "students": [],
+      "tutor": "Sarah Tan",
+      "status": "Available"
+    },
+    {
       "id": "L009",
-      "date": "2026-01-14T10:00:00Z",
+      "date": "2026-01-06T10:00:00Z",
       "type": "Available",
       "subject": "Minecraft AI Coding Adventure",
       "students": [],
@@ -79,7 +130,7 @@
     },
     {
       "id": "L015",
-      "date": "2026-01-04T19:00:00Z",
+      "date": "2026-01-07T19:00:00Z",
       "type": "Available",
       "subject": "Python for Kids - Game Projects",
       "students": [],
@@ -88,7 +139,7 @@
     },
     {
       "id": "L016",
-      "date": "2026-01-07T11:00:00Z",
+      "date": "2026-01-08T11:00:00Z",
       "type": "Available",
       "subject": "Python for Kids - Game Projects",
       "students": [],
